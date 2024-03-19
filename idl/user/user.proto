@@ -1,0 +1,40 @@
+syntax = "proto3";
+
+package user;
+
+option go_package = "user-center/user";
+
+import "api.proto";
+
+message RegisterReq {
+  string Username = 1[json_name = "username"];
+  string Password = 2[json_name = "password"];
+}
+
+message RegisterResp {
+  int32 StatusCode = 1[json_name = "status_code"];
+  string StatusMsg = 2[json_name = "status_msg"];
+  string UserID = 3[json_name = "user_id"];
+}
+
+message LoginReq {
+  string Username = 1[json_name = "username"];
+  string Password = 2[json_name = "password"];
+  string CheckPassword = 3[json_name = "check_password"];
+}
+
+message LoginResp {
+  int32 StatusCode = 1[json_name = "status_code"];
+  string StatusMsg = 2[json_name = "status_msg"];
+  string Token = 3;
+}
+
+service UserHandler {
+  rpc Register(RegisterReq) returns(RegisterResp) {
+    option (api.post) = "/api/user/register";
+  }
+
+  rpc Login(LoginReq) returns(LoginResp) {
+    option (api.post) = "/api/user/login";
+  }
+}
