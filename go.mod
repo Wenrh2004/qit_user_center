@@ -5,7 +5,7 @@ go 1.21.6
 require (
 	github.com/cloudwego/hertz v0.8.1
 	github.com/google/uuid v1.3.1
-	golang.org/x/crypto v0.14.0
+	golang.org/x/crypto v0.17.0
 	google.golang.org/protobuf v1.27.1
 	gorm.io/driver/mysql v1.5.5
 	gorm.io/gen v0.3.25
