@@ -6,7 +6,7 @@ require (
 	github.com/cloudwego/hertz v0.8.1
 	github.com/google/uuid v1.3.1
 	golang.org/x/crypto v0.14.0
-	google.golang.org/protobuf v1.27.1
+	google.golang.org/protobuf v1.33.0
 	gorm.io/driver/mysql v1.5.5
 	gorm.io/gen v0.3.25
 	gorm.io/gorm v1.25.8
